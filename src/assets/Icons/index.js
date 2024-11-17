@@ -1,4 +1,4 @@
-import hamburger from './Hamburger.svg'
+import hamburger from './hamburger.svg'
 import close from "./close.svg"
 import logoIcon from "./Logo.png"
 import facebook from "./facebook.svg"
