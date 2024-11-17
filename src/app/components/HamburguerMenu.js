@@ -91,7 +91,7 @@ const HamburguerMenu = () => {
                           className="flex flex-col items-start overflow-hidden underline" // Oculta el contenido excedente
                         >
                           {eventos.map((evento) => (
-                            <Link href={`/eventos/${evento.slug}`}>
+                            <Link key={evento.nombre} href={`/eventos/${evento.slug}`}>
                               <li onClick={()=>{
                                 setShowEvents(false)
                                 closeMenu()}

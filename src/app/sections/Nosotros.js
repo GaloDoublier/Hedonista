@@ -9,10 +9,10 @@ const Nosotros = () => {
 
   const titulo = () => {
     if(pathname === "/"){
-      return <h2 className="text-6xl text-center py-10">"Filosofia <span className="text-primary font-bold">Hedonista"</span></h2>
+      return <h2 className="text-6xl text-center py-10">&quot;Filosofia <span className="text-primary font-bold">Hedonista&quot;</span></h2>
     }
     else{
-      return <h1 className="text-6xl text-center py-10">"Filosofia <span className="text-primary font-bold">Hedonista"</span></h1>
+      return <h1 className="text-6xl text-center py-10">&quot;Filosofia <span className="text-primary font-bold">Hedonista&quot;</span></h1>
     }
   }
 

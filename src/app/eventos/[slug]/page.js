@@ -45,10 +45,10 @@ const page = ({params: {slug}}) => {
         <h2 className="text-center text-3xl sm:text-6xl">¿De que <span className="font-bold text-primary">trata</span> el evento de <span className="font-bold text-primary">{event.nombre}</span>?</h2>
         <div className="flex flex-col xl:flex-row gap-6 justify-center items-center padding">
         <p className="text-2xl leading-10 flex-1 md:px-24 max-sm:text-center">{event.explicacion}</p>
-        <Image className="flex-1 block max-sm:hidden h-[60vh]" width={760} height={1080} src={event.srcExtra[0]} />
+        <Image alt={event.nombre} className="flex-1 block max-sm:hidden h-[60vh]" width={760} height={1080} src={event.srcExtra[0]} />
         </div>
       </article>
-      <Image className="flex-1 hidden max-sm:block pb-10" width={760} height={1080} src={event.srcExtra[0]} />
+      <Image alt={event.nombre} className="flex-1 hidden max-sm:block pb-10" width={760} height={1080} src={event.srcExtra[0]} />
       <section className="flex flex-col justify-center items-center gap-20">
       <h2 className="text-center text-5xl sm:text-6xl"> <span className="font-bold text-primary">Detalles</span> del evento</h2>
       <div className="flex flex-col lg:flex-row  gap-3 lg:gap-10 justify-around items-center w-3/4 py-12">

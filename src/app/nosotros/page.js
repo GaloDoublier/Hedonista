@@ -23,7 +23,7 @@ export default function Page() {
 
       <section  id="espacio" className="w-full h-[65vh] bg-espacio bg-cover bg-center bg-fixed">
       <div className="flex flex-col justify-center items-center h-[65vh] gap-20 bg-black bg-opacity-50">
-        <p className="text-white relative text-center text-4xl sm:w-2/4">"Un espacio lleno de vida y color me encanta la coneccion con la naturaleza y la simpleza y arquitetura colonial del lugar."</p>
+        <p className="text-white relative text-center text-4xl sm:w-2/4">&quot;Un espacio lleno de vida y color me encanta la coneccion con la naturaleza y la simpleza y arquitetura colonial del lugar.&quot;</p>
         </div>
         </section>
 
