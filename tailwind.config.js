@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,9 +8,26 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        "primary": ['cinzel', 'serif'],
+        "secondary": ["spicyRice", 'serif'],
+      },
+      colors:{
+        "primary":"#0A3626",
+        "secondary":"#000"
+      },
+      backgroundImage: {
+        'hero': "url('/assets/hero-main1.jpg')",
+        'espacio': "url('/assets/Espacio.jpg')",
+      },
+      keyframes: {
+        slideIn: {
+          '0%': { transform: 'translateY(-150%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        }
+      },
+      animation: {
+        slideIn: 'slideIn 3s ease-out infinite',
       },
     },
   },

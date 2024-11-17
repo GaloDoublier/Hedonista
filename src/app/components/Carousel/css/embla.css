@@ -1,0 +1,156 @@
+.embla {
+  width: 80vw;
+  margin: auto;
+  --slide-height: 38rem;
+  --slide-spacing: 1rem;
+  --slide-size: 70%;
+}
+@media (max-width: 768px) {
+  .embla {
+    --slide-height: 38rem;
+    --slide-size: 100%;
+  }
+}
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+}
+.embla__slide__img {
+  border-radius: 1.8rem;
+  height: 100%;
+  display: block;
+  height: var(--slide-height);
+  width: 100%;
+  object-fit: cover;
+}
+.embla__controls {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+}
+.embla__buttons {
+  display: flex;
+  position: relative;
+  top: 340px;
+  gap: 60%;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .embla__buttons {
+    display: none;
+  }
+}
+.embla__button {
+  -webkit-tap-highlight-color: rgb(255, 255, 255);
+  -webkit-appearance: none;
+  appearance: none;
+
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 5rem;
+  height: 5rem;
+  z-index: 1;
+  border-radius: 0%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.embla__button:disabled {
+  color: rgb(242, 11, 11);
+}
+.embla__button__svg {
+  width: 35%;
+  height: 35%;
+}
+.embla__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+}
+.embla__dot {
+  -webkit-tap-highlight-color: rgba(49, 49, 49, 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.embla__dot:after {
+  box-shadow: inset 0 0 0 0.2rem rgb(166, 166, 166); 
+  width: 1.4rem;
+  height: 0.3rem;
+  display: flex;
+  align-items: center;
+  content: '';
+}
+.embla__dot--selected:after {
+  box-shadow: inset 0 0 0 0.2rem rgb(54, 49, 61);
+}
+.embla__parallax {
+  border-radius: 1.8rem;
+  height: 100%;
+  overflow: hidden;
+}
+.embla__parallax__layer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.embla__parallax__img {
+  max-width: none;
+  flex: 0 0 calc(115% + (var(--slide-spacing) * 2));
+  object-fit: cover;
+}
+/* Añades el gradiente sin tocar las reglas de la imagen */
+.embla__slide__img-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Pseudo-elemento para la sombra */
+.embla__slide__img-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Ajusta la altura de la sombra */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(3, 3, 3, 0.947) 100%);
+  pointer-events: none; /* Evita que interfiera con la imagen */
+  border-radius: 1.8rem; /* Para mantener el mismo borde redondeado */
+}

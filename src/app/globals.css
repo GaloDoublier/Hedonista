@@ -14,14 +14,45 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html{
+  scroll-padding-top: 5rem; /* Adjust to the height of your fixed navbar */
+}
+body{
+  background-color: #fff;
+}
+::selection {
+  background: rgba(121, 122, 122, 0.656);
 }
 
 @layer utilities {
+   
+  .padding {
+    @apply sm:px-12 px-8 sm:py-16 py-16;
+  }
+
+  .padding-b {
+    @apply sm:px-12 px-8 sm:pb-16 pb-16;
+  }
+  .info-text {
+    @apply font-secondary text-xl leading-7;
+  }
+  .title-text{
+    @apply text-center text-6xl sm:text-6xl font-primary text-secondary;
+  }
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
