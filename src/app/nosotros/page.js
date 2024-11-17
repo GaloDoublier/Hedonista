@@ -1,13 +1,9 @@
 import ImageGrid from "../components/ImageGrid";
-import TestimonioCard from "../components/TestimonioCard";
 import Nosotros from "../sections/Nosotros";
 import {DM_Serif_Text} from "next/font/google"
-import { clientes } from "@/constants";
 import { Espacio7,Espacio8,Espacio9} from "@/assets/Images";
 import Image from "next/image";
-import EmblaCarousel from "../components/Carousel/EmblaCarousel";
 import "../components/Carousel/css/embla.css"
-import Carrousel2 from "../components/Carrousel2";
 
 
 const SerifText = DM_Serif_Text({
