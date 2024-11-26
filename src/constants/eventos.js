@@ -1,6 +1,6 @@
 import {ceramica,catadevinos,catasdecervezas,maquillajeymerienda,tarotyvino,tarotymerienda,personalizado} from "@/assets/Images";
 import {ceramica1,catadevinos1,catasdecervezas1,maquillajeymerienda1,tarotyvino1,tarotymerienda1,personalizado1} from "@/assets/Images";
-import {ceramica2,catadevinos2,catasdecervezas2,maquillajeymerienda2,tarotyvino2,tarotymerienda2,personalizado2} from "@/assets/Images"
+import {ceramica2,catadevinos2,catasdecervezas2,carlos,tarotyvino2,tarotymerienda2,personalizado2} from "@/assets/Images"
 
 
 export const eventos = [
@@ -49,7 +49,7 @@ export const eventos = [
     duracion: "2 horas",
     material: "Maquillaje y productos de belleza",
     src: maquillajeymerienda,
-    srcExtra: [maquillajeymerienda1, maquillajeymerienda2],
+    srcExtra: [maquillajeymerienda1, carlos],
     ubicacion: "Ramos Mejía"
   },
   {

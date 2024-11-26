@@ -47,9 +47,9 @@ export {ceramica1,catadevinos1,catasdecervezas1,maquillajeymerienda1,tarotyvino1
 import ceramica2 from "./Eventos/ceramica/ceramica2.jpg"
 import catadevinos2 from "./Eventos/catadevinos/catadevinos2.jpg"
 import catasdecervezas2 from "./Eventos/catadecervezas/catadecervezas2.jpg"
-import maquillajeymerienda2 from "./Eventos/maquillajeymerienda/maquillajeymerienda2.jpg"
+import carlos from "./Eventos/maquillajeymerienda/carlos.jpg"
 import tarotyvino2 from "./Eventos/tarotyvino/tarotyvino2.jpg"
 import tarotymerienda2 from "./Eventos/tarotymerienda/tarotymerienda2.jpg"
 import personalizado2 from "./Eventos/personalizado/personalizado2.jpg"
 
-export {ceramica2,catadevinos2,catasdecervezas2,maquillajeymerienda2,tarotyvino2,tarotymerienda2,personalizado2}
+export {ceramica2,catadevinos2,catasdecervezas2,carlos,tarotyvino2,tarotymerienda2,personalizado2}
