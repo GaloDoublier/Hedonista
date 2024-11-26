@@ -21,6 +21,8 @@ const page = ({params: {slug}}) => {
       <Image 
         src={event.src} 
         alt="Descripción de la imagen"
+        layout="fill" // Ajusta el tamaño automáticamente
+        objectFit="cover" // Hace que la imagen cubra todo el contenedor
       />
       
       {/* Texto sobre la imagen */}
@@ -63,6 +65,8 @@ const page = ({params: {slug}}) => {
       <Image 
         src={event.srcExtra[1]} 
         alt="Descripción de la imagen"
+        layout="fill" // Ajusta el tamaño automáticamente
+        objectFit="cover" // Hace que la imagen cubra todo el contenedor
       />
       
       {/* Texto sobre la imagen */}
