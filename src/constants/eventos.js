@@ -1,6 +1,6 @@
 import {ceramica,catadevinos,catasdecervezas,maquillajeymerienda,tarotyvino,tarotymerienda,personalizado} from "@/assets/Images";
-import {ceramica1,catadevinos1,catasdecervezas1,maquillajeymerienda1,tarotyvino1,tarotymerienda1,personalizado1} from "@/assets/Images";
-import {ceramica2,catadevinos2,catasdecervezas2,carlos,tarotyvino2,tarotymerienda2,personalizado2} from "@/assets/Images"
+import {ceramica1,catadevinos1,catasdecervezas1,maquillajeymerienda1,tarotyvino1,tarotymerienda1,juan} from "@/assets/Images";
+import {ceramica2,catadevinos2,catasdecervezas2,carlos,tarotyvino22,tarotymerienda22,personalizado2} from "@/assets/Images"
 
 
 export const eventos = [
@@ -61,7 +61,7 @@ export const eventos = [
     duracion: "1.5 horas",
     material: "Tarot y vinos seleccionados",
     src: tarotyvino,
-    srcExtra: [tarotyvino1, tarotyvino2],
+    srcExtra: [tarotyvino1, tarotyvino22],
     ubicacion: "Ramos Mejía"
   },
   {
@@ -73,7 +73,7 @@ export const eventos = [
     duracion: "1.5 horas",
     material: "Tarot, merienda",
     src: tarotymerienda,
-    srcExtra: [tarotymerienda1, tarotymerienda2],
+    srcExtra: [tarotymerienda1, tarotymerienda22],
     ubicacion: "Ramos Mejía"
   },
   {
@@ -85,7 +85,7 @@ export const eventos = [
     duracion: "Variable",
     material: "Variable",
     src: personalizado,
-    srcExtra: [personalizado1, personalizado2],
+    srcExtra: [juan, personalizado2],
     ubicacion: "Ramos Mejía"
   }
 ];

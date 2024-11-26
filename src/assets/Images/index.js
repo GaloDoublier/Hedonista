@@ -38,18 +38,18 @@ import catasdecervezas1 from "./Eventos/catadecervezas/catasdecervezas1.jpg"
 import maquillajeymerienda1 from "./Eventos/maquillajeymerienda/maquillajeymerienda1.jpg"
 import tarotyvino1 from "./Eventos/tarotyvino/tarotyvino1.jpg"
 import tarotymerienda1 from "./Eventos/tarotymerienda/tarotymerienda1.jpg"
-import personalizado1 from "./Eventos/personalizado/personalizado1.jpg"
+import juan from "./Eventos/personalizado/juan.jpg"
 
 
-export {ceramica1,catadevinos1,catasdecervezas1,maquillajeymerienda1,tarotyvino1,tarotymerienda1,personalizado1}
+export {ceramica1,catadevinos1,catasdecervezas1,maquillajeymerienda1,tarotyvino1,tarotymerienda1,juan}
 
 
 import ceramica2 from "./Eventos/ceramica/ceramica2.jpg"
 import catadevinos2 from "./Eventos/catadevinos/catadevinos2.jpg"
 import catasdecervezas2 from "./Eventos/catadecervezas/catadecervezas2.jpg"
 import carlos from "./Eventos/maquillajeymerienda/carlos.jpg"
-import tarotyvino2 from "./Eventos/tarotyvino/tarotyvino2.jpg"
-import tarotymerienda2 from "./Eventos/tarotymerienda/tarotymerienda2.jpg"
+import tarotyvino22 from "./Eventos/tarotyvino/tarotyvino22.jpg"
+import tarotymerienda22 from "./Eventos/tarotymerienda/tarotymerienda22.jpg"
 import personalizado2 from "./Eventos/personalizado/personalizado2.jpg"
 
-export {ceramica2,catadevinos2,catasdecervezas2,carlos,tarotyvino2,tarotymerienda2,personalizado2}
+export {ceramica2,catadevinos2,catasdecervezas2,carlos,tarotyvino22,tarotymerienda22,personalizado2}
