@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Espacio1,Espacio2,Espacio3,Espacio4,Espacio5 } from "@/assets/Images"
+import { Espacio1,Espacio2,Espacio3,Espacio14,Espacio5 } from "@/assets/Images"
 
 const ImageGrid = () => {
   return (
@@ -21,7 +21,7 @@ const ImageGrid = () => {
       className="grid-image col-span-4 hidden md:block row-span-1 object-cover h-[600px] w-full" // Cambia a una altura más grande si es necesario
     />
     <Image
-      src={Espacio4}
+      src={Espacio14}
       alt="Descripción 4"
       className="grid-image col-span-2 row-span-1 object-cover h-[600px] w-full" // Cambia h-1/2 a h-60 o prueba con h-auto
     />

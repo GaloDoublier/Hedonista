@@ -7,7 +7,7 @@ import persona3 from "./persona3.jpg"
 import Espacio1 from "./Espacios/espacio1.jpg"
 import Espacio2 from "./Espacios/espacio2.jpg"
 import Espacio3 from "./Espacios/espacio3.jpg"
-import Espacio4 from "./Espacios/espacio4.jpg"
+import Espacio14 from "./Espacios/espacio14.jpg"
 import Espacio5 from "./Espacios/espacio5.jpg"
 import Espacio6 from "./Espacios/espacio6.jpg"
 import Espacio7 from "./Espacios/espacio7.jpg"
@@ -18,7 +18,7 @@ import Espacio9 from "./Espacios/espacio9.jpg"
 
 
 
-export {ImagenFondo,NosotrosImg,persona1,persona2,persona3,Espacio1,Espacio2,Espacio3,Espacio4,Espacio5,Espacio6,Espacio7,Espacio8,Espacio9}
+export {ImagenFondo,NosotrosImg,persona1,persona2,persona3,Espacio1,Espacio2,Espacio3,Espacio14,Espacio5,Espacio6,Espacio7,Espacio8,Espacio9}
 
 
 import ceramica from "./Eventos/ceramica.jpg"
