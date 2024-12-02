@@ -24,7 +24,7 @@ export {ImagenFondo,NosotrosImg,persona1,persona2,persona3,Espacio1,Espacio2,Esp
 import ceramica from "./Eventos/ceramica/ceramica.jpg"
 import catadevinos from "./Eventos/catadevinos/catadevinos.jpg"
 import catasdecervezas from "./Eventos/catadecervezas/catasdecervezas.jpg"
-import maquillajeymerienda from "./Eventos/maquillajeymerienda/maquillajeymerienda.JPG"
+import maquillajeymerienda from "./Eventos/maquillajeymerienda/maquillajeymerienda.jpeg"
 import tarotyvino from "./Eventos/tarotyvino/tarotyvino.jpg"
 import tarotymerienda from "./Eventos/tarotymerienda/tarotymerienda.jpg"
 import personalizado from "./Eventos/personalizado/personalizado.jpg"
@@ -38,7 +38,7 @@ import catasdecervezas1 from "./Eventos/catadecervezas/catasdecervezas1.jpg"
 import maquillajeymerienda1 from "./Eventos/maquillajeymerienda/maquillajeymerienda1.jpg"
 import tarotyvino1 from "./Eventos/tarotyvino/tarotyvino1.jpg"
 import tarotymerienda1 from "./Eventos/tarotymerienda/tarotymerienda1.jpg"
-import juan from "./Eventos/personalizado/juan.JPG"
+import juan from "./Eventos/personalizado/juan.jpeg"
 
 
 export {ceramica1,catadevinos1,catasdecervezas1,maquillajeymerienda1,tarotyvino1,tarotymerienda1,juan}
@@ -47,9 +47,9 @@ export {ceramica1,catadevinos1,catasdecervezas1,maquillajeymerienda1,tarotyvino1
 import ceramica2 from "./Eventos/ceramica/ceramica2.jpg"
 import catadevinos2 from "./Eventos/catadevinos/catadevinos2.jpg"
 import catasdecervezas2 from "./Eventos/catadecervezas/catadecervezas2.jpg"
-import carlos from "./Eventos/maquillajeymerienda/carlos.JPG"
+import carlos from "./Eventos/maquillajeymerienda/carlos.jpeg"
 import tarotyvino22 from "./Eventos/tarotyvino/tarotyvino22.jpg"
 import tarotymerienda22 from "./Eventos/tarotymerienda/tarotymerienda22.jpg"
-import personalizado2 from "./Eventos/personalizado/personalizado2.JPG"
+import personalizado2 from "./Eventos/personalizado/personalizado2.jpeg"
 
 export {ceramica2,catadevinos2,catasdecervezas2,carlos,tarotyvino22,tarotymerienda22,personalizado2}
