@@ -43,7 +43,7 @@ export const NavBar = () => {
             if (item.label === "Eventos") {
               return (
                 <li
-                className="font-secondary leading-normal text-lg text-white group transition-all duration-300 ease-out"
+                className=" leading-normal text-lg text-white group transition-all duration-300 ease-out"
                 key={item.label}
               >
               <DropdownMenu background={determineNavbarClass()} nombre={item.label} key={item.label} />
@@ -52,7 +52,7 @@ export const NavBar = () => {
             } else {
               return (
                 <li
-                  className="font-secondary leading-normal text-lg text-white group hover:opacity-60 transition-all duration-300 ease-out"
+                  className=" leading-normal text-lg text-white group hover:opacity-60 transition-all duration-300 ease-out"
                   key={item.label}
                 >
                   <Link className="relative inline-block" href={item.href}>

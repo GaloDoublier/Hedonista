@@ -30,13 +30,19 @@ export const metadata = {
   },
 };
 
+import { Economica } from "next/font/google"
+
+const Eco = Economica({
+  weight: '400',
+  subsets: ['latin'],
+})
 
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body>
-        <NavBar/>
+        <NavBar className={Eco.className}/>
         {children}
         <Footer/>
         </body>

@@ -11,7 +11,7 @@ const DropdownMenu = ({nombre,background}) => {
       <button
       onClick={()=>{setIsOpen(!isOpen);}}
 
-        className="inline-flex justify-center w-full shadow-sm px-4 py-2 font-secondary leading-normal text-lg text-white group hover:opacity-60 transition-all duration-300 ease-out"
+        className="inline-flex justify-center w-full shadow-sm px-4 py-2 leading-normal text-lg text-white group hover:opacity-60 transition-all duration-300 ease-out"
       >
         {nombre}
         <svg
@@ -35,8 +35,8 @@ const DropdownMenu = ({nombre,background}) => {
       {/* Dropdown Menu */}
         <div
         onClick={()=>{setIsOpen(false);}}
-        className={`origin-top-right absolute right-0 mt-2 w-40 rounded-md font-secondary text-md text-white transition-all duration-300 ease-in-out transform ${isOpen
-            ? 'opacity-100 scale-100'
+        className={`origin-top-right absolute right-0 mt-2 w-40 rounded-md text-md text-white transition-all duration-300 ease-in-out transform ${isOpen
+            ? 'opacity-100 bg-[#0a3625] scale-100'
             : 'opacity-0 scale-95 pointer-events-none'
         } ${
           background

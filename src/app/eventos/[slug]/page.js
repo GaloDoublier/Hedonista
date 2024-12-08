@@ -2,11 +2,11 @@ import { eventos } from "@/constants/eventos";
 import Image from "next/image";
 import Link from "next/link";
 import ButtonPrimary from "@/app/components/ButtonPrimary";
-import {DM_Serif_Text} from "next/font/google"
+import {Inter} from "next/font/google"
 import DetallesCard from "@/app/components/DetallesCard";
 import { precioImg,materialImg,duracionImg } from "@/assets/Icons";
 
-const SerifText = DM_Serif_Text({
+const SerifText = Inter({
   weight: '400',
   subsets: ['latin'],
 })
@@ -31,7 +31,7 @@ const page = ({params: {slug}}) => {
       className="absolute inset-0 flex flex-col items-center justify-center  ">
         <div className="  w-full h-full flex flex-col justify-around py-10 items-center">
           <div className="text-center flex flex-col gap-10">
-            <h1 className="text-white text-center text-6xl sm:text-8xl">
+            <h1 className="text-white text-center text-6xl sm:text-8xl font-primary">
             {event.nombre}
             </h1>
             <h2 className="text-white text-xl w-3/4  mx-auto">{event.descripcion}</h2>
@@ -75,7 +75,7 @@ const page = ({params: {slug}}) => {
       className="absolute inset-0 flex flex-col items-center justify-center  ">
         <div className="  w-full h-full flex flex-col justify-around py-10 items-center">
           <div className="text-center flex flex-col gap-10">
-            <h3 className="text-white text-center text-6xl sm:text-8xl">
+            <h3 className="text-white text-center text-6xl sm:text-8xl font-primary">
             {event.nombre}
             </h3>
             <Link href="/reserva"><ButtonPrimary text="Reservar"/></Link>

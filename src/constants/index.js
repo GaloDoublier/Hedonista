@@ -9,7 +9,7 @@ export const navLinks = [
     { href: "#contacto", label: "Contacto" },
 ];
 
-export const nombre = "Hedonista"
+export const nombre = "HEDONISTA"
 export const logo = logoIcon
 export const slogan = "Cada evento es único, cada experiencia inolvidable"
 

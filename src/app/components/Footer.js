@@ -26,10 +26,10 @@ const Footer = () => {
           <div 
                   key={sucursal.name}
                   className="flex flex-col">
-                    <h3 className="flex-1 text-[60px] font-primary font-bold">{sucursal.name}</h3>
+                    <h3 className="flex-1 text-[60px] font-primary ">Contacto</h3>
                     <ul className="text-xl font-sans">
-                    <li className="mb-5">Dirección: {sucursal.location}</li>
-                    <li className="mb-5">Teléfono: {sucursal.telefono}</li>
+                    <li className="mb-5 font-semibold">Dirección: {sucursal.name}, {sucursal.location}</li>
+                    <li className="mb-5 font-semibold">Teléfono: {sucursal.telefono}</li>
                     </ul>
                   </div>
                  
