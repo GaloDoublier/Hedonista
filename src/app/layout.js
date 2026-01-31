@@ -2,26 +2,48 @@ import "./globals.css";
 import { NavBar } from "./components/NavBar";
 import Footer from "./components/Footer";
 import { SEO } from "@/constants";
+import { Cormorant_Garamond, Montserrat } from "next/font/google";
+
+const cormorant = Cormorant_Garamond({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+});
+
+const montserrat = Montserrat({
+  weight: ["300", "400", "500", "600"],
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
 
 export const metadata = {
   title: SEO.title,
   description: SEO.description,
   alternates: {
-    canonical: "http://hedonista.com.ar", // URL temporal durante el desarrollo
+    canonical: "https://huarteimagen.com",
   },
-  keywords: ["eventos ramos mejía", "cata de vino ramos mejía", "taller de ceramica ramos mejía","Te Gales ramos mejía"],
+  keywords: [
+    "asesoría de imagen",
+    "imagen personal",
+    "colorimetría",
+    "estilismo",
+    "maquillaje profesional",
+    "personal shopper",
+    "belleza",
+    "Buenos Aires",
+  ],
   robots: {
     index: true,
     follow: true,
   },
-  author: "Galo Doublier",
+  author: "Huarte Imagen",
   openGraph: {
     title: SEO.title,
     description: SEO.description,
-    url: "https://www.hedonista.com.ar",
+    url: "https://www.huarteimagen.com",
     images: [
       {
-        url: "https://www.hedonista.com.ar/images/og-image.jpg",
+        url: "https://www.huarteimagen.com/images/og-image.jpg",
         width: 800,
         height: 600,
         alt: SEO.title,
@@ -30,23 +52,14 @@ export const metadata = {
   },
 };
 
-import { Economica } from "next/font/google"
-
-const Eco = Economica({
-  weight: '400',
-  subsets: ['latin'],
-})
-
-
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
-      <body>
-        <NavBar className={Eco.className}/>
+    <html lang="es" className={`${cormorant.variable} ${montserrat.variable}`}>
+      <body className="font-secondary bg-background text-secondary antialiased">
+        <NavBar />
         {children}
-        <Footer/>
-        </body>
+        <Footer />
+      </body>
     </html>
   );
 }
-

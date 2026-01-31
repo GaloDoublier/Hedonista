@@ -1,130 +1,145 @@
 "use client";
-import { hamburger } from "@/assets/Icons";
-import { navLinks } from "@/constants";
-import { eventos } from "@/constants/eventos";
-import Image from "next/image";
+import { navLinks, nombre } from "@/constants";
 import Link from "next/link";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion";
 
-const HamburguerMenu = () => {
+const HamburguerMenu = ({ textColor, isScrolled, pathname }) => {
   const [visible, setVisible] = useState(false);
-  const [showEvents, setShowEvents] = useState(false);
 
   const toggleMenu = () => {
     setVisible(!visible);
   };
-  const handleEventsToggle = () => {
-    setShowEvents(!showEvents);
-};
 
   const closeMenu = () => {
     setVisible(false);
   };
 
+  const getIconColor = () => {
+    if (pathname === "/" && !isScrolled) {
+      return "#ffffff";
+    }
+    return "#2C2C2C";
+  };
+
   return (
     <>
       {/* Botón Hamburguesa */}
-      <div className="md:hidden cursor-pointer z-50">
-        <button onClick={toggleMenu}>
-          <Image alt="Hamburguer" height={25} width={23} src={hamburger} />
-        </button>
-      </div>
+      <button
+        onClick={toggleMenu}
+        className="z-50 p-2 focus:outline-none"
+        aria-label="Menú"
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke={getIconColor()}
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
 
-      {/* Fondo semi-transparente cuando el menú está abierto */}
-      {visible && (
-        <div
-          className="fixed inset-0 bg-black opacity-50 z-40"
-          onClick={closeMenu} // Cerrar el menú al hacer clic fuera
-        ></div>
-      )}
+      {/* Overlay */}
+      <AnimatePresence>
+        {visible && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-black/50 z-40"
+            onClick={closeMenu}
+          />
+        )}
+      </AnimatePresence>
 
       {/* Menú deslizante */}
-      <div
-        className={`fixed top-0 right-0 h-[100vh] w-64 bg-primary text-white p-8 transition-transform duration-300 transform ${
-          visible ? "translate-x-0" : "translate-x-full"
-        } z-50`}
-      >
-        {/* Botón para cerrar el menú */}
-        <button
-          className="text-3xl mb-8 focus:outline-none"
-          onClick={toggleMenu}
-        >
-          &times;
-        </button>
+      <AnimatePresence>
+        {visible && (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="fixed top-0 right-0 h-screen w-80 bg-white z-50 shadow-2xl"
+          >
+            {/* Header del menú */}
+            <div className="flex justify-between items-center p-6 border-b border-gray-100">
+              <span className="font-primary text-2xl text-secondary">
+                {nombre}
+              </span>
+              <button
+                onClick={toggleMenu}
+                className="p-2 focus:outline-none"
+                aria-label="Cerrar menú"
+              >
+                <svg
+                  className="w-6 h-6 text-secondary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
 
-        {/* Links de navegación */}
-        <nav>
-          <ul className="space-y-4">
-            {navLinks.map((link,index)=>{
-              if(link.label==="Eventos"){
-                return (
-                  <div key={index} className="">
-                    <li onClick={handleEventsToggle} className="text-white flex">
-                      <button className="py-2">
-                        {link.label}
-                      </button>
-                      <svg
-                        className={`mx-1 my-auto h-5 w-5 transition-transform duration-300 ease-in-out transform ${
-                          showEvents ? "rotate-180" : "rotate-0"
-                        }`}
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </li>
-                    <AnimatePresence>
-                      {showEvents && (
-                        <motion.ul
-                          initial={{ opacity: 0, height: 0 }} // Estado inicial
-                          animate={{ opacity: 1, height: "auto" }} // Estado final
-                          exit={{ opacity: 0, height: 0 }} // Estado de salida
-                          transition={{ duration: 0.3 }} // Duración de la animación
-                          className="flex flex-col items-start overflow-hidden underline" // Oculta el contenido excedente
-                        >
-                          {eventos.map((evento) => (
-                            <Link key={evento.nombre} href={`/eventos/${evento.slug}`}>
-                              <li onClick={()=>{
-                                setShowEvents(false)
-                                closeMenu()}
-                                } className="p-3">{evento.nombre}</li>
-                            </Link>
-                          ))}
-                        </motion.ul>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                );
-              }
-              else{
-                return (
-                  <li key={index}>
+            {/* Links de navegación */}
+            <nav className="p-6">
+              <ul className="space-y-1">
+                {navLinks.map((link, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
                     <Link
                       href={link.href}
-                      className="hover:underline"
+                      className="block py-3 font-secondary text-secondary hover:text-primary transition-colors border-b border-gray-50"
                       onClick={closeMenu}
                     >
                       {link.label}
                     </Link>
-                  </li>
-                );
-              }
-              
-            })}
+                  </motion.li>
+                ))}
+              </ul>
 
-            <li className="absolute top-[90vh] left-40"><Link href="/reserva" onClick={closeMenu}>Reserva ya</Link></li>
+              {/* CTA Reservar */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: navLinks.length * 0.1 }}
+                className="mt-8"
+              >
+                <Link
+                  href="/reserva"
+                  onClick={closeMenu}
+                  className="block w-full py-4 text-center bg-primary text-white font-secondary uppercase tracking-wider hover:bg-primary-dark transition-colors"
+                >
+                  Reservar consulta
+                </Link>
+              </motion.div>
+            </nav>
 
-          </ul>
-        </nav>
-      </div>
+            {/* Decoración inferior */}
+            <div className="absolute bottom-8 left-6 right-6">
+              <div className="w-12 h-px bg-primary mx-auto"></div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
