@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #FAF8F5;
-  --foreground: #2C2C2C;
-  --primary: #C4A484;
-  --primary-dark: #A68B6A;
-  --secondary: #2C2C2C;
-  --accent: #D4AF37;
-  --muted: #8B7355;
-  --rose: #E8D5D5;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -25,92 +14,123 @@ html {
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: #FAF8F5;
+  color: #2C2C2C;
 }
 
 ::selection {
   background: rgba(196, 164, 132, 0.4);
 }
 
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 8px;
+.padding {
+  padding: 3rem 1.5rem;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--background);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--primary);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-dark);
-}
-
-@layer utilities {
+@media (min-width: 640px) {
   .padding {
-    @apply sm:px-12 px-6 sm:py-16 py-12;
-  }
-
-  .padding-b {
-    @apply sm:px-12 px-6 sm:pb-16 pb-12;
-  }
-
-  .padding-t {
-    @apply sm:px-12 px-6 sm:pt-16 pt-12;
-  }
-
-  .info-text {
-    @apply font-secondary text-xl leading-7;
-  }
-
-  .title-text {
-    @apply text-center text-5xl sm:text-6xl font-primary text-secondary;
-  }
-
-  .subtitle-text {
-    @apply text-center text-2xl sm:text-3xl font-primary text-muted;
-  }
-
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  .section-title {
-    @apply text-4xl sm:text-5xl font-primary text-secondary text-center mb-4;
-  }
-
-  .section-subtitle {
-    @apply text-lg sm:text-xl font-secondary text-muted text-center mb-12 max-w-2xl mx-auto;
-  }
-
-  .btn-primary {
-    @apply px-8 py-3 bg-primary text-white font-secondary text-sm uppercase tracking-wider 
-           hover:bg-primary-dark transition-all duration-300 ease-out;
-  }
-
-  .btn-outline {
-    @apply px-8 py-3 border-2 border-primary text-primary font-secondary text-sm uppercase tracking-wider 
-           hover:bg-primary hover:text-white transition-all duration-300 ease-out;
-  }
-
-  .btn-white {
-    @apply px-8 py-3 border-2 border-white text-white font-secondary text-sm uppercase tracking-wider 
-           hover:bg-white hover:text-secondary transition-all duration-300 ease-out;
-  }
-
-  .card-elegant {
-    @apply bg-white p-8 shadow-sm hover:shadow-md transition-shadow duration-300;
+    padding: 4rem 3rem;
   }
 }
 
-@layer components {
-  .max-container {
-    max-width: 1440px;
-    margin: 0 auto;
+.padding-b {
+  padding: 0 1.5rem 3rem;
+}
+
+@media (min-width: 640px) {
+  .padding-b {
+    padding: 0 3rem 4rem;
   }
+}
+
+.padding-t {
+  padding: 3rem 1.5rem 0;
+}
+
+@media (min-width: 640px) {
+  .padding-t {
+    padding: 4rem 3rem 0;
+  }
+}
+
+.max-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-title {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .section-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #C4A484;
+  color: white;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease-out;
+}
+
+.btn-primary:hover {
+  background-color: #A68B6A;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border: 2px solid #C4A484;
+  color: #C4A484;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease-out;
+}
+
+.btn-outline:hover {
+  background-color: #C4A484;
+  color: white;
+}
+
+.btn-white {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border: 2px solid white;
+  color: white;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease-out;
+}
+
+.btn-white:hover {
+  background-color: white;
+  color: #2C2C2C;
 }

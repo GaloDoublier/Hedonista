@@ -5,8 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { notFound } from "next/navigation";
+import { use } from "react";
 
-export default function ServicioPage({ params: { slug } }) {
+export default function ServicioPage({ params }) {
+  const { slug } = use(params);
   const servicio = servicios.find((s) => s.slug === slug);
 
   if (!servicio) {
