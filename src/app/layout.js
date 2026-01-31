@@ -55,7 +55,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${cormorant.variable} ${montserrat.variable}`}>
-      <body className="font-secondary bg-background text-secondary antialiased">
+      <body className="antialiased" style={{ backgroundColor: "#FAF8F5", color: "#2C2C2C" }}>
         <NavBar />
         {children}
         <Footer />
